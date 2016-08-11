@@ -9,9 +9,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-      "super-preview-client": "kbrabrand/super-preview-client"
-  },
-  "peerDependencies": {
+    "super-preview-client": "kbrabrand/super-preview-client",
     "react": "^15.3.0",
     "react-dom": "^15.3.0"
   }

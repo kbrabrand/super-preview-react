@@ -10,10 +10,8 @@ module.exports = React.createClass({
     },
 
     render: function render() {
-        console.log(client.assemble(this.props.compressed));
+        var div = React.createFactory('div');
 
-        return (
-            <img/>
-        );
+        return div({ className: 'my-div' });
     }
 })
