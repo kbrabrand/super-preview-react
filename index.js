@@ -18,14 +18,17 @@ module.exports = React.createClass({
     render: function render() {
         var imageData = client.assemble(this.props.compressed);
 
-        return React.createElement('img', {
+        return React.createElement('div', {
             onLoad: this.handleLoadEvent,
-            className: (this.state.loading ? "loading" : '' ),
+            className: 'super-preview ' + (this.state.loading ? "super-preview--loading" : '' ),
             style: {
-                width: this.props.width + 'px',
-                height: this.props.height + 'px',
+                paddingBottom: ((this.props.height / this.props.width) * 100) + '%'
+            }
+        }, React.createElement('img', {
+            className: 'super-preview__image',
+            style: {
                 backgroundImage: 'url(data:image/jpeg;base64,' + imageData.base64 + ')'
             }
-        });
+        }));
     }
 })
