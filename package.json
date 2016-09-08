@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "super-preview": "kbrabrand/super-preview",
-    "react": "^0.12"
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0"
   }
 }
