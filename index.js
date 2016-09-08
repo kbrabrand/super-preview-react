@@ -1,7 +1,6 @@
 var React = require('react');
-var SuperPreviewClient = require('super-preview-client');
-
-var client = new SuperPreviewClient();
+var SuperPreview = require('super-preview');
+var superPreview = new SuperPreview();
 
 module.exports = React.createClass({
     getInitialState: function() {
@@ -15,8 +14,14 @@ module.exports = React.createClass({
         compressed: React.PropTypes.string
     },
 
+    handleLoadEvent: function(e) {
+        this.setState({
+            loading: false
+        });
+    },
+
     render: function render() {
-        var imageData = client.assemble(this.props.compressed);
+        var imageData = superPreview.assemble(this.props.compressed);
 
         return React.createElement('div', {
             onLoad: this.handleLoadEvent,
@@ -26,6 +31,7 @@ module.exports = React.createClass({
             }
         }, React.createElement('img', {
             className: 'super-preview__image',
+            src: this.props.url,
             style: {
                 backgroundImage: 'url(data:image/jpeg;base64,' + imageData.base64 + ')'
             }

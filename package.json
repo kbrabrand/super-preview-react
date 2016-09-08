@@ -1,16 +1,12 @@
 {
-  "name": "react-super-preview",
+  "name": "super-preview-react",
   "version": "1.0.0",
-  "description": "",
+  "description": "React component for Super Preview",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
+  "author": "Kristoffer Brabrand <kristoffer@brabrand.no>",
   "license": "MIT",
   "dependencies": {
-    "super-preview-client": "kbrabrand/super-preview-client",
-    "react": "^15.3.0",
-    "react-dom": "^15.3.0"
+    "super-preview": "kbrabrand/super-preview",
+    "react": "^0.12"
   }
 }
