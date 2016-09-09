@@ -1,12 +1,12 @@
 {
   "name": "super-preview-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React component for Super Preview",
   "main": "index.js",
   "author": "Kristoffer Brabrand <kristoffer@brabrand.no>",
   "license": "MIT",
   "dependencies": {
-    "super-preview": "kbrabrand/super-preview",
+    "super-preview": "^1.0.2",
     "react": "^15.3.0",
     "react-dom": "^15.3.0"
   }
